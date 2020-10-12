@@ -1,23 +1,37 @@
-import React from 'react'
-import { StyleSheet, Text, View } from 'react-native'
+import React from 'react';
+import {StyleSheet, Text, View} from 'react-native';
 import Icon from 'react-native-vector-icons/dist/FontAwesome';
 
 const Header = () => {
-    return (
-        <View style={styles.container}>
-            <Icon style={{marginHorizontal:10}} name="bars" size={30} color="#900" />
-            <Text style={{fontWeight:'bold',fontSize:20,marginHorizontal:50}}>Todo List</Text>
-        </View>
-    )
-}
+  return (
+    <View style={styles.container}>
+      <Icon
+        style={{marginHorizontal: 10}}
+        name="bars"
+        size={35}
+        color="#819ca9"
+      />
+      <Text
+        style={{
+          fontWeight: 'bold',
+          fontSize: 30,
+          marginHorizontal: 50,
+          color: '#102027',
+        }}>
+        Todo List
+      </Text>
+    </View>
+  );
+};
 
-export { Header};
+export {Header};
 
 const styles = StyleSheet.create({
-    container:{
-        // flex:1,
-        flexDirection:"row",
-        alignItems:'baseline',
-        
-    }
-})
+  container: {
+    // flex:1,
+    margin: 10,
+    flexDirection: 'row',
+    alignItems: 'baseline',
+    marginBottom: 30,
+  },
+});
