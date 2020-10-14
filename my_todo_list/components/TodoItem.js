@@ -10,26 +10,29 @@ const TodoItem = ({item, pressHandler, pressCheck}) => {
 
   return (
     <View style={styles.container}>
+      <TouchableOpacity
+        style={[styles.check, {backgroundColor: item.done ? 'black' : 'white'}]}
+        onPress={() => {
+          return pressCheck(item.key), console.log('fazi');
+        }}>
+        {item.check}
+      </TouchableOpacity>
       <Text
         style={[
           styles.list,
           {textDecorationLine: item.done ? 'line-through' : null},
+          {backgroundColor: item.done ? '#80deea' : '#546e7a'},
+          {color: item.done ? 'black' : 'white'},
         ]}>
-        {' '}
-        <TouchableOpacity
-          onPress={() => {
-            return pressCheck(item.key), console.log('fazi');
-          }}>
-          {item.check}
-        </TouchableOpacity>
-        {item.text}{' '}
-        <TouchableOpacity
-          onPress={() => {
-            return pressHandler(item.key), console.log('fazi');
-          }}>
-          {item.del}
-        </TouchableOpacity>{' '}
+        {item.text}
       </Text>
+
+      <TouchableOpacity
+        onPress={() => {
+          return pressHandler(item.key), console.log('fazi');
+        }}>
+        {item.del}
+      </TouchableOpacity>
     </View>
   );
 };
@@ -40,11 +43,12 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     flexDirection: 'row',
-    //   justifyContent:'space-between',
-    // margin:0,
+    justifyContent: 'space-between',
+    alignItems: 'center',
   },
   list: {
-    alignContent: 'space-between',
+    // alignContent: 'space-between',
+    justifyContent: 'center',
     flex: 1,
     margin: 5,
     padding: 10,
@@ -52,10 +56,13 @@ const styles = StyleSheet.create({
     borderRadius: 5,
     color: 'white',
     fontWeight: 'bold',
+    fontSize: 25,
+    // alignItems: 'center',
   },
-
-  delete: {
-    justifyContent: 'flex-end',
-    alignItems: 'flex-end',
+  check: {
+    // backgroundColor: 'rgba(105,105,105, 0.5)',
+    borderRadius: 100,
+    borderColor: '#546e7a',
+    borderWidth: 3,
   },
 });
