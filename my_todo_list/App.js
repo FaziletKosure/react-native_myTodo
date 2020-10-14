@@ -14,7 +14,7 @@ import Icon from 'react-native-vector-icons/dist/FontAwesome';
 const App = () => {
   const [todoList, setTodoList] = useState([
     {
-      text: 'doe homework',
+      text: 'do homework',
       done: false,
       check: <Icon name="check" size={25} color="#819ca9" />,
       del: <Icon name="trash" size={30} color="#819ca9" />,
