@@ -28,7 +28,7 @@ const App = () => {
       key: '2',
     },
   ]);
-  // const renderItemList={()}
+
   //Check isDone*******
   const pressCheck = (key) => {
     setTodoList((prevTodoList) => {
@@ -70,7 +70,6 @@ const App = () => {
             <FlatList
               data={todoList}
               extraData={true}
-              //  numColumns={2}
               renderItem={({item}) => (
                 <TodoItem
                   item={item}
