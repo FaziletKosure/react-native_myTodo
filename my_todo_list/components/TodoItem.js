@@ -54,7 +54,6 @@ const styles = StyleSheet.create({
     fontSize: 25,
   },
   check: {
-    // backgroundColor: 'rgba(105,105,105, 0.5)',
     borderRadius: 100,
     borderColor: '#546e7a',
     borderWidth: 3,
