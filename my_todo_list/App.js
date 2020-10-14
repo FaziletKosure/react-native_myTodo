@@ -94,6 +94,7 @@ const App = () => {
               {todoList.length - todoList.filter((todo) => todo.done).length}
             </Text>
           </View>
+          {/* <AddTodo submitHandler={submitHandler} /> */}
         </View>
       </ScrollView>
     </KeyboardAvoidingView>
