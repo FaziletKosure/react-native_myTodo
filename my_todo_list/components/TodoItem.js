@@ -57,7 +57,6 @@ const styles = StyleSheet.create({
     color: 'white',
     fontWeight: 'bold',
     fontSize: 25,
-    // alignItems: 'center',
   },
   check: {
     // backgroundColor: 'rgba(105,105,105, 0.5)',

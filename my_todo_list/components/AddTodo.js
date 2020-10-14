@@ -14,11 +14,11 @@ const AddTodo = ({submitHandler}) => {
   const changeHandler = (val) => {
     setTodo(val);
   };
-  //clear input value
+
   const clearInputFunc = (val) => {
     setTodo('');
   };
-  //   const plusIcon=
+
   return (
     <View style={{margin: 40, alignItems: 'center'}}>
       <TextInput
