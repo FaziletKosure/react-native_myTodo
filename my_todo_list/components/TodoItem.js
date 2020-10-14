@@ -3,11 +3,6 @@ import Icon from 'react-native-vector-icons/dist/FontAwesome';
 import {StyleSheet, Text, View, TouchableOpacity} from 'react-native';
 
 const TodoItem = ({item, pressHandler, pressCheck}) => {
-  //   const check = <Icon name="check" size={30} color="#819ca9" />;
-  //   const del = (
-  //     <Icon style={styles.delete} name="trash" size={30} color="#819ca9" />
-  //   );
-
   return (
     <View style={styles.container}>
       <TouchableOpacity
